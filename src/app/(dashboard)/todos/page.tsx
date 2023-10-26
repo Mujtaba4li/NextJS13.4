@@ -5,9 +5,9 @@ import { todo } from 'node:test'
 import React from 'react'
 const getData=async () =>{
 	const todos=await db.todo.findMany({})
-	return todo
+	return todos
 }
-const todos = async() => {
+const  TodosPage = async() => {
 	const todo=await getData();
 	console.log(todo);
 	return <div>
@@ -15,4 +15,4 @@ const todos = async() => {
 	</div>
 }
 
-export default todos
+export default TodosPage
